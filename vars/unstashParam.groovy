@@ -12,7 +12,7 @@ def call(String name, String fname = null) {
                     error "unstashParam: not a file parameter: ${name}"
                 }
                 if (!param.getOriginalFileName()) {
-                    error "unstashParam: file was not uploaded"
+                    return false
                 }
                 if (env['NODE_NAME'] == null) {
                     error "unstashParam: no node in current context"
