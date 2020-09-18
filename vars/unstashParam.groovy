@@ -39,6 +39,6 @@ def call(String name, String fname = null) {
             }
         }
     }
-    error "unstashParam: No file parameter named '${name}'"
+    return false
 }
 
